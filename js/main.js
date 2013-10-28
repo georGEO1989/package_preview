@@ -1,0 +1,1 @@
+var myPackage = angular.module('myPackage', []);
