@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="package">
 	<head>
-		<script type="text/javascript" src="js/angular.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/angular-upload/src/directives/btnUpload.min.css">
 		<title>Package Preview</title>
 	</head>
 
 	<body>
-		<div class="span12" style="border: 1px solid black;">
-			<div class="span8 display" style="border: 1px solid blue;">
+		<div class="span12 main" style="border: 1px solid black;">
+			<div class="span2 left">
+				test
+			</div>
+
+			<div class="span4 display">
+				<img src="img/package.png" alt="Base Packaging">
+
+				<body ng-app="app" ng-controller="AppCtrl">
+    				<input name="myFile" type="file" />
+				</body>
+
+				 <div class="btn-upload" upload-button url="/upload" on-success="onSuccess(response)" multiple="true">
+    				<button class="btn btn-primary">Fileupload</button>
+  				</div>
+			</div>
+
+			<div class="span2 right">
 				test
 			</div>
 		</div>
 
-		<script type="text/javascript" src="main.js"></script>
-		<script type="text/javascript" src="bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="bower_components/angular-upload/angular-upload.min.js"></script>
 	</body>
 
 </html>
